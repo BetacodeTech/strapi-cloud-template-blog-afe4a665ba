@@ -15,12 +15,6 @@
     "name": {
       "type": "string"
     },
-    "course": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::course.course",
-      "inversedBy": "lesson"
-    },
     "content": {
       "type": "dynamiczone",
       "components": [
@@ -33,7 +27,7 @@
         "shared.code"
       ]
     },
-    "sections": {
+    "sublesson": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::lesson.lesson"

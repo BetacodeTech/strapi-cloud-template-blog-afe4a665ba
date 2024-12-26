@@ -15,11 +15,26 @@
     "name": {
       "type": "string"
     },
-    "lesson": {
+    "lessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "author": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::lesson.lesson",
-      "mappedBy": "course"
+      "target": "api::author.author"
     }
   }
 }
